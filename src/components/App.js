@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import CategoriesList from './CategoriesList';
-// import getDataFromApi from './server/api';
+import getApiAdata from '../server/api';
 
 function App() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    getApiAdata().then((data) => setCategories(data));
+  }, []);
   return (
     <>
       <Header />
-      <CategoriesList />
+      <CategoriesList categories={categories} />
     </>
   );
 }

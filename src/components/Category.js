@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Category = () => {
+const Category = (props) => {
   return (
     <div className="collapsible">
       <img src="" alt="" />
-      <span>Populares</span>
+      <span>{props.name}</span>
     </div>
   );
 };

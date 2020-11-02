@@ -10,7 +10,6 @@ function fetchUserToken() {
   return fetch('https://api.comprea.com/v7/user/session')
     .then((response) => response.json())
     .then((sessionInformation) => {
-      console.log(sessionInformation);
       return sessionInformation.token;
     });
 }
@@ -18,7 +17,6 @@ function fetchUserToken() {
 function fetchMercadonaId(token) {
   const postalCode = '28010';
   const url = `https://api.comprea.com/v7/user/postalcode?token=${token}&postalcode=${postalCode}`;
-  console.log(url);
   return fetch(url)
     .then((marketResponse) => marketResponse.json())
     .then((marketResponseAsJson) => {
@@ -26,7 +24,6 @@ function fetchMercadonaId(token) {
         (service) => service.markets
       );
       markets = [].concat.apply([], markets);
-      console.log(markets);
       return markets.find((market) => market.name === 'Mercadona').id;
     });
 }
@@ -38,6 +35,6 @@ function fetchCategories(token, mercadonaId) {
     .then((categoriesResponse) => categoriesResponse.json())
     .then((categories) => {
       return categories.categories;
-    })
-    .then((categories) => console.log(categories));
+    });
+  // .then((categories) => console.log(categories));
 }
