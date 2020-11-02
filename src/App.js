@@ -1,26 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import getDataFromApi from './server/api';
+import React from 'react';
+// import getDataFromApi from './server/api';
 import './App.css';
 
 function App() {
-  const [sections, setSections] = useState([]);
-
-  useEffect(() => {
-    getDataFromApi();
-  }, []);
-
-  const renderData = () => {
-    const sectionsRendered = sections.map((section, index) => {
-      return (
-        <li className={index}>
-          <p>{section.name}</p>
+  return (
+    <>
+      <div className="header">
+        <img src="" alt="" />
+        <h1>Mercadona</h1>
+        <span>Comprando en 28010</span>
+      </div>
+      <ul className="category-list">
+        <li>
+          <img src="" alt="" />
+          <span>Populares</span>
         </li>
-      );
-    });
-    return <ul>{sectionsRendered}</ul>;
-  };
-
-  return <div className="App">{renderData()}</div>;
+        <li>
+          <img src="" alt="" />
+          <span>Frutas y Verduras</span>
+          <ul>
+            <li>Ver toda la sección</li>
+            <li>Frutas</li>
+            <li>Verduras</li>
+          </ul>
+        </li>
+      </ul>
+    </>
+  );
 }
 
 export default App;
