@@ -1,6 +1,6 @@
 import React from 'react';
-import CategoriesList from './CategoriesList';
 import Header from './Header';
+import CategoriesList from './CategoriesList';
 // import getDataFromApi from './server/api';
 
 function App() {
