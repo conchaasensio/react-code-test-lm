@@ -6,7 +6,7 @@ const Header = () => {
       <div className="header__container-logo">
         <img
           className="header__logo"
-          src="../images/ic_circled_super.png"
+          src="./images/ic_circled_super.png"
           alt="Logo Mercadona"
         />
       </div>
