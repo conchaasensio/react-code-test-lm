@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Category = (props) => {
+function Category(props) {
+  const [isShown, setIsShown] = useState(false);
   return (
     <div className="collapsible">
       <div className="collapsible__img">
@@ -8,12 +9,22 @@ const Category = (props) => {
       </div>
       <div className="collapsible__content">
         <span className="collapsible__content-title">{props.name}</span>
-        <div className="collapsible__content-hide">
-          <img src="./images/ic_hide.svg" alt="Desplegar" />
+        <div
+          className="collapsible__content-display"
+          onMouseEnter={() => setIsShown(true)}
+          onMouseLeave={() => setIsShown(false)}
+        >
+          {isShown && (
+            <img
+              className="content__display-hide"
+              src="./images/ic_show.svg"
+              alt="Desplegar"
+            />
+          )}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Category;
