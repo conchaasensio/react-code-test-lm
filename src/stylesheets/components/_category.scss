@@ -24,6 +24,7 @@ a {
   background-color: transparent;
   outline: none;
   :active {
+    //Con esto quería que cambiara el color al clickar, pero no ha funcionado.
     background-color: #4fd053;
     color: #666666;
     opacity: 0.1;
