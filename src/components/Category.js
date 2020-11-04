@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { ReactComponent as Hide } from '../assets/ic_hide.svg';
 import SubcategoriesList from './SubcategoriesList';
 
 function Category(props) {
-  const [isShown, setIsShown] = useState(false);
-
+  let params = useParams();
+  const url = isShown() ? '/' : `/tienda/mercadona/${props.id}`;
   return (
     <>
       <div className="all">
         <div className="category__container">
-          <button onClick={() => setIsShown(!isShown)}>
+          <Link to={url}>
             <div className="category__info">
               <div className="category__icon">
                 <img src={props.img} alt="" />
@@ -19,11 +20,11 @@ function Category(props) {
               </div>
             </div>
             <div className="hide__icon-container">
-              {isShown ? <Hide /> : <Hide className="hide__icon" />}
+              {isShown() ? <Hide className="hide__icon" /> : <Hide />}
             </div>
-          </button>
+          </Link>
         </div>
-        {isShown ? (
+        {isShown() ? (
           <div>
             <div className="categories">
               <h3 className="all-section">Ver toda la sección</h3>
@@ -36,29 +37,12 @@ function Category(props) {
           ''
         )}
       </div>
-      {/* <div className="collapsible">
-      <div className="collapsible__img">
-        <img src={props.img} alt="" />
-      </div>
-      <div className="collapsible__content">
-        <span className="collapsible__content-title">{props.name}</span>
-        <div
-          className="collapsible__content-display"
-          onMouseEnter={() => setIsShown(true)}
-          onMouseLeave={() => setIsShown(false)}
-        >
-          {isShown && (
-            <img
-              className="content__display-hide"
-              src="./images/ic_show.svg"
-              alt="Desplegar"
-            />
-          )}
-        </div>
-      </div>
-    </div> */}
     </>
   );
+
+  function isShown() {
+    return parseInt(params.categoryId) === props.id;
+  }
 }
 
 export default Category;

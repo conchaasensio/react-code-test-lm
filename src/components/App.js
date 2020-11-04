@@ -18,6 +18,9 @@ function App() {
         <Route exact path="/">
           <CategoriesList categories={categories} />
         </Route>
+        <Route path="/tienda/mercadona/:categoryId">
+          <CategoriesList categories={categories} />
+        </Route>
       </Switch>
     </div>
   );
