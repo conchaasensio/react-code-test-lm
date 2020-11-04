@@ -1,0 +1,44 @@
+.subCategory__container {
+  border-bottom: 0.5px solid #d5d5d5;
+  width: 324px;
+  height: 56px;
+  background-color: #f5f5f5;
+}
+
+.subCategory__title {
+  font-size: 18px;
+  color: #666666;
+  padding-left: 10px;
+  font-weight: 400;
+  font-family: 'SF UI Display';
+  font-size: 18px;
+}
+
+.subCategory__info {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #666666;
+  padding-left: 47px;
+  font-weight: 400;
+}
+
+.subCategory__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 19.5px;
+  max-height: 19px;
+  margin: 18px 14.1px 19px 0;
+  color: #4fd053;
+  img {
+    width: 100%;
+  }
+}
+
+.subCategories__container {
+  font-size: 18px;
+  color: #666666;
+  // padding-left: 47px;
+  font-weight: 400;
+}

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { fetchSubCategories } from '../server/api';
+import React from 'react';
 import SubCategory from './SubCategory';
 
 const SubcategoriesList = (props) => {
   const subCategories = props.subCategories.map((subCategory) => {
     return (
-      <li className="categories__list-item" key={subCategory.id}>
+      <li className="subCategories__list-item" key={subCategory.id}>
         <SubCategory
           id={subCategory.id}
           name={subCategory.name}
@@ -14,7 +13,7 @@ const SubcategoriesList = (props) => {
       </li>
     );
   });
-  return <ul className="categories__list">{subCategories}</ul>;
+  return <ul className="subCategories__list">{subCategories}</ul>;
 };
 
 export default SubcategoriesList;

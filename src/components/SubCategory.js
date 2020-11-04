@@ -4,12 +4,12 @@ function SubCategory(props) {
   return (
     <>
       <div className="all">
-        <div className="category__container">
-          <div className="category__info">
-            <div className="category__icon">
+        <div className="subCategory__container">
+          <div className="subCategory__info">
+            <div className="subCategory__icon">
               <img src={props.img} alt="" />
             </div>
-            <div className="category__title">
+            <div className="subCategory__title">
               <span>{props.name}</span>
             </div>
           </div>

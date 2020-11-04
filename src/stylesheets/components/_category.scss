@@ -35,6 +35,8 @@ button {
   color: #666666;
   padding-left: 10px;
   font-weight: 400;
+  font-family: 'SF UI Display';
+  font-size: 18px;
 }
 
 .category__info {
@@ -71,6 +73,7 @@ button {
   height: 56px;
   display: flex;
   align-items: center;
+  border-bottom: 0.5px solid #d5d5d5;
 }
 
 .all-section {
@@ -78,6 +81,8 @@ button {
   color: #666666;
   padding-left: 47px;
   font-weight: 400;
+  font-family: 'SF UI Display';
+  font-size: 18px;
 }
 
 // .collapsible {
