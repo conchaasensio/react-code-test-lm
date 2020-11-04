@@ -26,14 +26,15 @@ button {
   :active {
     background-color: #4fd053;
     color: #666666;
+    opacity: 0.1;
   }
+}
 
-  .category__title {
-    font-size: 18px;
-    color: #666666;
-    padding-left: 10px;
-    font-weight: 400;
-  }
+.category__title {
+  font-size: 18px;
+  color: #666666;
+  padding-left: 10px;
+  font-weight: 400;
 }
 
 .category__info {
@@ -72,11 +73,10 @@ button {
   align-items: center;
 }
 
-.all__section {
+.all-section {
   font-size: 18px;
   color: #666666;
   padding-left: 47px;
-  font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 

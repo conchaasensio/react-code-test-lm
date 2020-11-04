@@ -5,7 +5,12 @@ const CategoriesList = (props) => {
   const categories = props.categories.map((category) => {
     return (
       <li className="categories__list-item" key={category.id}>
-        <Category name={category.name} img={category.icon} />
+        <Category
+          id={category.id}
+          name={category.name}
+          img={category.icon}
+          subCategories={category.categories}
+        />
       </li>
     );
   });

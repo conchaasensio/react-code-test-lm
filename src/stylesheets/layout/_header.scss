@@ -7,6 +7,7 @@
   height: 64px;
   background-color: green;
   position: fixed;
+  z-index: 100;
 
   &-logo {
     display: flex;
