@@ -26,7 +26,7 @@ function Category(props) {
             <div className="categories">
               <h3 className="allsection">Ver toda la sección</h3>
             </div>
-            <div className="subcategories-container">
+            <div className="subcategories__container">
               <ul>
                 <li>bla</li>
                 <li>bla</li>
