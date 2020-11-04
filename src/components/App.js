@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import CategoriesList from './CategoriesList';
-import getApiAdata from '../server/api';
+import getDataFromApi from '../server/api';
 import '../stylesheets/App.scss';
 
 function App() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    getApiAdata().then((data) => setCategories(data));
+    getDataFromApi().then((data) => setCategories(data));
   }, []);
   return (
-    <>
+    <div className="App">
       <Header />
-      <CategoriesList categories={categories} />
-    </>
+      <Switch>
+        <Route exact path="/">
+          <CategoriesList categories={categories} />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
