@@ -13,7 +13,6 @@ function SubCategory(props) {
       <div className="all">
         <div className="subCategory__container">
           <Link to={url}>
-            {isChecked() ? <Checked /> : ''}
             <div className="subCategory__info">
               <div className="subCategory__icon">
                 <img src={props.img} alt="" />
@@ -22,6 +21,7 @@ function SubCategory(props) {
                 <span>{props.name}</span>
               </div>
             </div>
+            {isChecked() ? <Checked className="checked__icon" /> : ''}
           </Link>
         </div>
       </div>
