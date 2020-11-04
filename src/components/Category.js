@@ -1,9 +1,44 @@
 import React, { useState } from 'react';
+import { ReactComponent as Hide } from '../assets/ic_hide.svg';
 
 function Category(props) {
   const [isShown, setIsShown] = useState(false);
   return (
-    <div className="collapsible">
+    <>
+      <div className="all">
+        <div className="category__container">
+          <button onClick={() => setIsShown(!isShown)}>
+            <div className="category__info">
+              <div className="category__icon">
+                <img src={props.img} alt="" />
+              </div>
+              <div className="category__title">
+                <span>{props.name}</span>
+              </div>
+            </div>
+            <div className="hide__icon-container">
+              {isShown ? <Hide /> : <Hide className="hide__icon" />}
+            </div>
+          </button>
+        </div>
+        {isShown ? (
+          <div>
+            <div className="categories">
+              <h3 className="allsection">Ver toda la sección</h3>
+            </div>
+            <div className="subcategories-container">
+              <ul>
+                <li>bla</li>
+                <li>bla</li>
+                <li>bla</li>
+              </ul>
+            </div>
+          </div>
+        ) : (
+          ''
+        )}
+      </div>
+      {/* <div className="collapsible">
       <div className="collapsible__img">
         <img src={props.img} alt="" />
       </div>
@@ -23,7 +58,8 @@ function Category(props) {
           )}
         </div>
       </div>
-    </div>
+    </div> */}
+    </>
   );
 }
 
