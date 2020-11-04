@@ -18,7 +18,10 @@ function App() {
         <Route exact path="/">
           <CategoriesList categories={categories} />
         </Route>
-        <Route path="/tienda/mercadona/:categoryId">
+        <Route exact path="/tienda/mercadona/:categoryId">
+          <CategoriesList categories={categories} />
+        </Route>
+        <Route exact path="/tienda/mercadona/:categoryId/:subCategoryId">
           <CategoriesList categories={categories} />
         </Route>
       </Switch>
