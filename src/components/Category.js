@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ReactComponent as Hide } from '../assets/ic_hide.svg';
 import SubcategoriesList from './SubcategoriesList';
@@ -27,7 +27,9 @@ function Category(props) {
         {isShown() ? (
           <div>
             <div className="categories">
-              <h3 className="all-section">Ver toda la sección</h3>
+              <Link to={`/tienda/mercadona/${params.categoryId}`}>
+                <h3 className="all-section">Ver toda la sección</h3>
+              </Link>
             </div>
             <div className="subCategories__container">
               <SubcategoriesList subCategories={props.subCategories} />
