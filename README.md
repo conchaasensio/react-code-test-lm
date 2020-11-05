@@ -1,6 +1,6 @@
-# Frontend Code test - Lola Market
+# Frontend Code test
 
-This project was a code test proposed by Lola Market in the context of a selection process, and it has been performed using **React**.
+This project was a code test proposed by a tech company in the context of a selection process, and it has been performed using **React**.
 
 The goal was, given both a visual specification and an API, I had to build a categories component for an specific shop.
 
