@@ -36,5 +36,4 @@ function fetchCategories(token, mercadonaId) {
     .then((categories) => {
       return categories.categories;
     });
-  // .then((categories) => console.log(categories));
 }

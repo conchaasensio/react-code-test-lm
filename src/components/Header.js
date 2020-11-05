@@ -14,7 +14,6 @@ const Header = () => {
         <h1 className="header__title">Mercadona</h1>
         <span className="header__postalcode">Comprando en 28010</span>
       </div>
-      {/* <span className="header__option">Cambiar</span> */}
     </div>
   );
 };
